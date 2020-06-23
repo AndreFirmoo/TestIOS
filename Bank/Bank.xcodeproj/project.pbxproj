@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,9 @@
 		88EEAFEE24A1B66B001DC3C7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88EEAFEC24A1B66B001DC3C7 /* LaunchScreen.storyboard */; };
 		88EEAFF924A1B66C001DC3C7 /* BankTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EEAFF824A1B66C001DC3C7 /* BankTests.swift */; };
 		88EEB00424A1B66C001DC3C7 /* BankUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EEB00324A1B66C001DC3C7 /* BankUITests.swift */; };
+		88EEB01E24A1C3AB001DC3C7 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 88EEB01D24A1C3AB001DC3C7 /* Alamofire */; };
+		88EEB02124A1C45B001DC3C7 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 88EEB02024A1C45B001DC3C7 /* Realm */; };
+		88EEB02324A1C45B001DC3C7 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 88EEB02224A1C45B001DC3C7 /* RealmSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +59,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88EEB02324A1C45B001DC3C7 /* RealmSwift in Frameworks */,
+				88EEB02124A1C45B001DC3C7 /* Realm in Frameworks */,
+				88EEB01E24A1C3AB001DC3C7 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -224,6 +230,11 @@
 			dependencies = (
 			);
 			name = Bank;
+			packageProductDependencies = (
+				88EEB01D24A1C3AB001DC3C7 /* Alamofire */,
+				88EEB02024A1C45B001DC3C7 /* Realm */,
+				88EEB02224A1C45B001DC3C7 /* RealmSwift */,
+			);
 			productName = Bank;
 			productReference = 88EEAFDE24A1B665001DC3C7 /* Bank.app */;
 			productType = "com.apple.product-type.application";
@@ -296,6 +307,10 @@
 				Base,
 			);
 			mainGroup = 88EEAFD524A1B665001DC3C7;
+			packageReferences = (
+				88EEB01C24A1C3AB001DC3C7 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				88EEB01F24A1C45B001DC3C7 /* XCRemoteSwiftPackageReference "realm-cocoa" */,
+			);
 			productRefGroup = 88EEAFDF24A1B665001DC3C7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -672,6 +687,43 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		88EEB01C24A1C3AB001DC3C7 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.2.1;
+			};
+		};
+		88EEB01F24A1C45B001DC3C7 /* XCRemoteSwiftPackageReference "realm-cocoa" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-cocoa.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		88EEB01D24A1C3AB001DC3C7 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 88EEB01C24A1C3AB001DC3C7 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		88EEB02024A1C45B001DC3C7 /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 88EEB01F24A1C45B001DC3C7 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = Realm;
+		};
+		88EEB02224A1C45B001DC3C7 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 88EEB01F24A1C45B001DC3C7 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = RealmSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 88EEAFD624A1B665001DC3C7 /* Project object */;
 }
