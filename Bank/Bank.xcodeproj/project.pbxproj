@@ -104,7 +104,6 @@
 				88EEB01124A1B8E9001DC3C7 /* Services */,
 				88EEAFE124A1B665001DC3C7 /* AppDelegate.swift */,
 				88EEAFE324A1B665001DC3C7 /* SceneDelegate.swift */,
-				88EEAFE524A1B665001DC3C7 /* ViewController.swift */,
 				88EEAFE724A1B665001DC3C7 /* Main.storyboard */,
 				88EEAFEA24A1B66B001DC3C7 /* Assets.xcassets */,
 				88EEAFEC24A1B66B001DC3C7 /* LaunchScreen.storyboard */,
@@ -161,6 +160,7 @@
 		88EEB01524A1B915001DC3C7 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				88EEAFE524A1B665001DC3C7 /* ViewController.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
