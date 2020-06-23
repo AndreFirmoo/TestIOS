@@ -33,7 +33,7 @@ class LoginInteractor: LoginBusinessLogic, LoginDataStore
     
   
     init(repository: LoginRepositoryProtocol = LoginRepository.shared){
-        self.repository = repository as! LoginRepository
+        self.repository = repository as? LoginRepository
     }
     
     
@@ -55,6 +55,9 @@ class LoginInteractor: LoginBusinessLogic, LoginDataStore
         switch result{
         case .success(let value):
             let response = Login.Response(user: value)
+            if value.error.code == 53 {
+                self?.presenter?.presentError(error: "Senha ou usuario incorreto")
+            }
             self?.setupResponse(response: response, userName: request.username)
         case .failure(let error):
             self?.presenter?.presentError(error: error.localizedDescription)

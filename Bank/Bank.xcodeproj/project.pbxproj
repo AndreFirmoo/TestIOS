@@ -39,6 +39,13 @@
 		88EEB0CF24A1FE76001DC3C7 /* Validate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EEB0CE24A1FE76001DC3C7 /* Validate.swift */; };
 		88EEB0D324A1FF5F001DC3C7 /* PriceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EEB0D224A1FF5F001DC3C7 /* PriceHelper.swift */; };
 		88EEB0D524A1FFD6001DC3C7 /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EEB0D424A1FFD6001DC3C7 /* DateHelper.swift */; };
+		88EEB0D824A202C1001DC3C7 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EEB0D724A202C1001DC3C7 /* HomeTableViewCell.swift */; };
+		88EEB0DA24A20D7A001DC3C7 /* HomeModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EEB0D924A20D7A001DC3C7 /* HomeModels.swift */; };
+		88EEB0DC24A21241001DC3C7 /* HomeDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EEB0DB24A21240001DC3C7 /* HomeDataStore.swift */; };
+		88EEB0DE24A21336001DC3C7 /* HomeInterector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EEB0DD24A21336001DC3C7 /* HomeInterector.swift */; };
+		88EEB0E024A213F7001DC3C7 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EEB0DF24A213F7001DC3C7 /* HomePresenter.swift */; };
+		88EEB0E224A21415001DC3C7 /* HomeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EEB0E124A21415001DC3C7 /* HomeRepository.swift */; };
+		88EEB0E424A21480001DC3C7 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EEB0E324A21480001DC3C7 /* HomeRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +101,13 @@
 		88EEB0CE24A1FE76001DC3C7 /* Validate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validate.swift; sourceTree = "<group>"; };
 		88EEB0D224A1FF5F001DC3C7 /* PriceHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceHelper.swift; sourceTree = "<group>"; };
 		88EEB0D424A1FFD6001DC3C7 /* DateHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
+		88EEB0D724A202C1001DC3C7 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
+		88EEB0D924A20D7A001DC3C7 /* HomeModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModels.swift; sourceTree = "<group>"; };
+		88EEB0DB24A21240001DC3C7 /* HomeDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDataStore.swift; sourceTree = "<group>"; };
+		88EEB0DD24A21336001DC3C7 /* HomeInterector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInterector.swift; sourceTree = "<group>"; };
+		88EEB0DF24A213F7001DC3C7 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		88EEB0E124A21415001DC3C7 /* HomeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRepository.swift; sourceTree = "<group>"; };
+		88EEB0E324A21480001DC3C7 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -225,6 +239,11 @@
 			children = (
 				88EEB01724A1B92C001DC3C7 /* HomeCell */,
 				88EEB06724A1F1FD001DC3C7 /* HomeViewController.swift */,
+				88EEB0DB24A21240001DC3C7 /* HomeDataStore.swift */,
+				88EEB0DD24A21336001DC3C7 /* HomeInterector.swift */,
+				88EEB0DF24A213F7001DC3C7 /* HomePresenter.swift */,
+				88EEB0E124A21415001DC3C7 /* HomeRepository.swift */,
+				88EEB0E324A21480001DC3C7 /* HomeRouter.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -232,6 +251,7 @@
 		88EEB01724A1B92C001DC3C7 /* HomeCell */ = {
 			isa = PBXGroup;
 			children = (
+				88EEB0D724A202C1001DC3C7 /* HomeTableViewCell.swift */,
 			);
 			path = HomeCell;
 			sourceTree = "<group>";
@@ -281,6 +301,7 @@
 		88EEB02D24A1CBD5001DC3C7 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				88EEB0D924A20D7A001DC3C7 /* HomeModels.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -523,6 +544,7 @@
 			files = (
 				88EEB0CD24A1FE42001DC3C7 /* StringValidator.swift in Sources */,
 				88EEB02924A1CA71001DC3C7 /* LoginPresenter.swift in Sources */,
+				88EEB0E024A213F7001DC3C7 /* HomePresenter.swift in Sources */,
 				88EEB03024A1CC23001DC3C7 /* LoginRepository.swift in Sources */,
 				88EEB03724A1CCE6001DC3C7 /* UserMapper.swift in Sources */,
 				88EEB0CF24A1FE76001DC3C7 /* Validate.swift in Sources */,
@@ -530,10 +552,15 @@
 				88EEB05F24A1DE3A001DC3C7 /* APIRepository.swift in Sources */,
 				88EEB0C424A1FD23001DC3C7 /* Urls.swift in Sources */,
 				88EEB02B24A1CBBE001DC3C7 /* LoginModels.swift in Sources */,
+				88EEB0E224A21415001DC3C7 /* HomeRepository.swift in Sources */,
 				88EEB0D524A1FFD6001DC3C7 /* DateHelper.swift in Sources */,
+				88EEB0E424A21480001DC3C7 /* HomeRouter.swift in Sources */,
 				88EEAFE224A1B665001DC3C7 /* AppDelegate.swift in Sources */,
+				88EEB0D824A202C1001DC3C7 /* HomeTableViewCell.swift in Sources */,
+				88EEB0DA24A20D7A001DC3C7 /* HomeModels.swift in Sources */,
 				88EEB06824A1F1FD001DC3C7 /* HomeViewController.swift in Sources */,
 				88EEB0BC24A1FB21001DC3C7 /* AlertController.swift in Sources */,
+				88EEB0DC24A21241001DC3C7 /* HomeDataStore.swift in Sources */,
 				88EEB02524A1C5CB001DC3C7 /* LoginRouter.swift in Sources */,
 				88EEB05D24A1D7E6001DC3C7 /* API.swift in Sources */,
 				88EEB02724A1C7F5001DC3C7 /* LoginInteractor.swift in Sources */,
@@ -545,6 +572,7 @@
 				88EEB0C224A1FC17001DC3C7 /* Error.swift in Sources */,
 				88EEB0D324A1FF5F001DC3C7 /* PriceHelper.swift in Sources */,
 				88EEB03324A1CCB7001DC3C7 /* RealmRepository.swift in Sources */,
+				88EEB0DE24A21336001DC3C7 /* HomeInterector.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

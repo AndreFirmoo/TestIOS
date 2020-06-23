@@ -162,7 +162,7 @@
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="414" id="cFI-ll-Gfe"/>
                                 </constraints>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="120" id="DWh-iU-99Y">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="infoCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="infoCell" rowHeight="120" id="DWh-iU-99Y" customClass="HomeTableViewCell" customModule="Bank" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="120"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="DWh-iU-99Y" id="hjz-KY-rTK">
@@ -225,6 +225,12 @@
                                                 <constraint firstItem="L9z-BC-jeq" firstAttribute="leading" secondItem="hjz-KY-rTK" secondAttribute="leading" id="tnv-Fc-hGf"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="dateLb" destination="j8L-Br-VN7" id="e3b-Bj-LVv"/>
+                                            <outlet property="itemTitleLb" destination="C6k-CN-GyX" id="Owv-XU-JPf"/>
+                                            <outlet property="itemTypeLb" destination="8F8-wF-9Lk" id="S5e-hw-dyi"/>
+                                            <outlet property="priceLb" destination="wey-mG-ZdN" id="fkK-Gj-8xI"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -243,6 +249,12 @@
                         <viewLayoutGuide key="safeArea" id="lDS-MY-5T5"/>
                     </view>
                     <navigationItem key="navigationItem" id="gvP-Ns-FCa"/>
+                    <connections>
+                        <outlet property="tableview" destination="fFV-gN-nNH" id="KH4-zg-fk6"/>
+                        <outlet property="userAccontLb" destination="EiM-Wm-R0r" id="k9j-wv-z6R"/>
+                        <outlet property="userBalance" destination="uMs-4f-Hzz" id="UKe-t4-f2f"/>
+                        <outlet property="usernameLb" destination="ooK-Lv-S3D" id="P7Q-fW-ycP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PBc-kt-Kx2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
