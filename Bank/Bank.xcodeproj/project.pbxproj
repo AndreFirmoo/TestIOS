@@ -99,6 +99,9 @@
 		88EEAFE024A1B665001DC3C7 /* Bank */ = {
 			isa = PBXGroup;
 			children = (
+				88EEB01324A1B8F9001DC3C7 /* Scenes */,
+				88EEB01224A1B8F2001DC3C7 /* Models */,
+				88EEB01124A1B8E9001DC3C7 /* Services */,
 				88EEAFE124A1B665001DC3C7 /* AppDelegate.swift */,
 				88EEAFE324A1B665001DC3C7 /* SceneDelegate.swift */,
 				88EEAFE524A1B665001DC3C7 /* ViewController.swift */,
@@ -126,6 +129,83 @@
 				88EEB00524A1B66C001DC3C7 /* Info.plist */,
 			);
 			path = BankUITests;
+			sourceTree = "<group>";
+		};
+		88EEB01124A1B8E9001DC3C7 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				88EEB01924A1B971001DC3C7 /* APIRepository */,
+				88EEB01824A1B95B001DC3C7 /* API */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		88EEB01224A1B8F2001DC3C7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				88EEB01B24A1B994001DC3C7 /* Realm */,
+				88EEB01A24A1B988001DC3C7 /* Mapper */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		88EEB01324A1B8F9001DC3C7 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				88EEB01624A1B925001DC3C7 /* Home */,
+				88EEB01524A1B915001DC3C7 /* Login */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		88EEB01524A1B915001DC3C7 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		88EEB01624A1B925001DC3C7 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				88EEB01724A1B92C001DC3C7 /* HomeCell */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		88EEB01724A1B92C001DC3C7 /* HomeCell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = HomeCell;
+			sourceTree = "<group>";
+		};
+		88EEB01824A1B95B001DC3C7 /* API */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		88EEB01924A1B971001DC3C7 /* APIRepository */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = APIRepository;
+			sourceTree = "<group>";
+		};
+		88EEB01A24A1B988001DC3C7 /* Mapper */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Mapper;
+			sourceTree = "<group>";
+		};
+		88EEB01B24A1B994001DC3C7 /* Realm */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Realm;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -437,6 +517,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = D73SZWFV4A;
 				INFOPLIST_FILE = Bank/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -455,6 +536,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = D73SZWFV4A;
 				INFOPLIST_FILE = Bank/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
