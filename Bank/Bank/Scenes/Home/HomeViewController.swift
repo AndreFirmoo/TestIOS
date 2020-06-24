@@ -62,6 +62,10 @@ class HomeViewController: UIViewController, HomeDisplayLogic {
         tableViewDataSource = HomeDataSource(presenter: self.presenter!)
         
     }
+    @IBAction func logout(_ sender: Any) {
+        self.interector?.removeUserFromRealm()
+        router?.routeToLogin(home: self)
+    }
     
     // MARK: - PopulateInformations
     

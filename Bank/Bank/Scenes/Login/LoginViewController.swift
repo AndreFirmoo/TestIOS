@@ -25,7 +25,7 @@ class LoginViewController: UIViewController {
     //MARK: - lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        setup()
     }
     //MARK: - Variables
     var router: LoginRouter?
@@ -66,13 +66,12 @@ class LoginViewController: UIViewController {
     
     //MARK: - Setup
     private func setup(){
-        presenter?.viewController = self
         interactor?.getLastUser()
     }
     //MARK: - Router to Home
     
     @IBAction func login(_ sender: Any) {
-        if usernameTextField.text == "" || passwordTextField.text == ""{
+        if usernameTextField.text == ""  || passwordTextField.text == ""{
             showError(error: "Usuario ou senha invalidos")
         }else{
             let requestUser = Login.Request(username: usernameTextField.text! ,

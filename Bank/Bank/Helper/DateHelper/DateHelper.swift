@@ -11,7 +11,12 @@ import Foundation
 extension Date {
    func getFormattedDate(format: String) -> String {
         let dateformat = DateFormatter()
-        dateformat.dateFormat = format
+        dateformat.dateFormat = "dd-MM-yyyy"
+        dateformat.locale = Locale(identifier: "pt-br")
+        dateformat.date(from: format)
+    
+        dateformat.dateStyle = .short
+        print(format)
         return dateformat.string(from: self)
     }
 }

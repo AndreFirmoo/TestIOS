@@ -9,8 +9,7 @@
 import UIKit
 import Realm
 
-protocol LoginBusinessLogic
-{
+protocol LoginBusinessLogic{
   func getValidationLogin(request: Login.Request)
 }
 
@@ -19,8 +18,8 @@ protocol LoginDataStore {
     var user: UserRealm? { get set }
 }
 
-class LoginInteractor: LoginBusinessLogic, LoginDataStore
-{
+class LoginInteractor: LoginBusinessLogic, LoginDataStore{
+    
     var presenter: LoginPresentationLogic?
     var repository: LoginRepository?
     var user: UserRealm?
@@ -48,8 +47,15 @@ class LoginInteractor: LoginBusinessLogic, LoginDataStore
     
   // MARK: Do something
   
-  func getValidationLogin(request: Login.Request)
-  {
+  func getValidationLogin(request: Login.Request){
+    if let emailError = Validator.isValid(username: request.username) {
+           presenter?.presentError(error: emailError)
+           return
+       }
+       if let passwordError = Validator.isValid(password: request.password) {
+           presenter?.presentError(error: passwordError)
+           return
+       }
     repository = LoginRepository()
     repository?.getRequestUser(request: request, completion: {[weak self]  (result) in
         switch result{
@@ -73,10 +79,12 @@ class LoginInteractor: LoginBusinessLogic, LoginDataStore
         newUser.balance = "R$ \(response.user?.userAccount.balance ?? 0)"
         newUser.name = response.user?.userAccount.name ?? ""
         newUser.username = userName
-        if let user = self.user {
-           realmRepository.saveObjc(obj: user)
+        self.user = newUser
+        
+        if let user = self.user?.isEqual(newUser) {
+           realmRepository.updateObj(obj: newUser)
         } else {
-           self.user = newUser
+           
            realmRepository.updateObj(obj: newUser)
         }
         presenter?.presentSomething(response: response)

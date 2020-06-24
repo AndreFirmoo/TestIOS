@@ -34,7 +34,8 @@ class HomeRouter: NSObject, HomeRoutingLogic, HomeDataPassing {
     func routeToLogin(home: HomeViewController) {
         home.dismiss(animated: true, completion: nil)
         
-//        let login = LoginViewController(interactor: LoginInteractor(repository: LoginRepository()), router: LoginRouter(navigationController: navigationController as! UINavigationController), presenter: LoginPresenter())
-//        navigationController.present(login, animated: false, completion: nil)
+        let login: LoginViewController = LoginViewController(interactor: LoginInteractor(repository: LoginRepository()), router: LoginRouter(navigationController: navigationController), presenter: LoginPresenter())
+        login.modalPresentationStyle = .fullScreen
+        home.presentingViewController?.presentingViewController?.present(login, animated: true, completion: nil)
     }
 }
