@@ -10,7 +10,7 @@ import UIKit
 
 
 protocol HomeDisplayLogic: class{
-  func displaySomething(viewModel: Home.ViewModel)
+    func displaySomething(viewModel: Home.ViewModel)
 }
 
 
@@ -23,69 +23,58 @@ class HomeViewController: UIViewController, HomeDisplayLogic {
     
     
     
-
+    
     var router: HomeRouter?
-    private var interector: HomeInteractor
-    private var presenter: HomePresenter
+    private var interector: HomeInteractor?
+    private var presenter: HomePresenter?
     private var tableViewDataSource: HomeDataSource?
     
-   init(interactor: HomeInteractor, router: HomeRouter, presenter: HomePresenter) {
+    public func setup(interactor: HomeInteractor, router: HomeRouter, presenter: HomePresenter) {
         self.interector = interactor
-        self.interector.presenter = presenter
+        self.interector?.presenter = presenter
         self.presenter = presenter
         self.router = router
-        super.init(nibName: nil, bundle: nil)
         setupView()
     }
     
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-     
-     // MARK: - View lifecycle
-     
-//        private func setup()
-//        {
-//            let viewController = self
-//            let interactor = HomeInteractor(user: user)
-//            let presenter = HomePresenter()
-//            let router = HomeRouter(navigationController:self)
-//            viewController.interector = interactor
-//            viewController.router = router
-//            interactor.presenter = presenter
-//            presenter.viewController = viewController
-//            router.viewController = viewController
-//            router.dataStore = interactor as! HomeDataStore
-//        }
     
     
+    // MARK: - View lifecycle
     
-       override func viewDidLoad() {
-           
-           populateInformations()
-           setupView()
-               
-          }
-       
-       private func setupView() {
-            presenter.viewController = self
-              
-            HomeDataSource.setupHome(tableView: tableview)
-            tableViewDataSource = HomeDataSource(presenter: presenter)
-            tableview.dataSource = tableViewDataSource
-            tableview.delegate = tableViewDataSource
-          }
-     
-     // MARK: - PopulateInformations
-     
-     func populateInformations(){
-        let request = Home.Request(userId: interector.user.userId ?? "1.0")
-        interector.getInfoStatements(request: request)
-     }
     
-    func displaySomething(viewModel: Home.ViewModel) {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        populateInformations()
+        self.tableview.delegate = tableViewDataSource
+        self.tableview.dataSource = tableViewDataSource
         
     }
-
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+    }
+    
+    private func setupView() {
+        self.presenter?.viewController = self
+        
+        HomeDataSource.setupHome(tableView: self.tableview)
+        tableViewDataSource = HomeDataSource(presenter: self.presenter!)
+        
+    }
+    
+    // MARK: - PopulateInformations
+    
+    func populateInformations(){
+        let request = Home.Request(userId: interector?.user.userId ?? "1")
+        self.interector?.getInfoStatements(request: request)
+    }
+    
+    func displaySomething(viewModel: Home.ViewModel) {
+        usernameLb.text = viewModel.response.user?.name
+        userAccontLb.text = viewModel.response.user?.account
+        userBalance.text = viewModel.response.user?.balance
+        tableview.reloadData()
+    }
+    
 }

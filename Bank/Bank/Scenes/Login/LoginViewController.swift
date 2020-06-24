@@ -72,9 +72,13 @@ class LoginViewController: UIViewController {
     //MARK: - Router to Home
     
     @IBAction func login(_ sender: Any) {
-        let requestUser = Login.Request(username: usernameTextField.text ?? "",
-                                        password: passwordTextField.text ?? "")
-        interactor?.getValidationLogin(request: requestUser)
+        if usernameTextField.text == "" || passwordTextField.text == ""{
+            showError(error: "Usuario ou senha invalidos")
+        }else{
+            let requestUser = Login.Request(username: usernameTextField.text! ,
+                                            password: passwordTextField.text! )
+            interactor?.getValidationLogin(request: requestUser)
+        }
     }
     func login(){
          if let user = interactor?.user {
@@ -87,7 +91,7 @@ class LoginViewController: UIViewController {
 
 extension LoginViewController: LoginDisplayInfos {
     func showError(error: String) {
-         AlertView.showAlert(view: self, title: "Error", message: "Usuario ou senha incorretos")
+         AlertView.showAlert(view: self, title: "Error", message: error)
     }
     
     func setupUser(user: UserRealm) {

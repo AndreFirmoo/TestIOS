@@ -74,10 +74,10 @@ class LoginInteractor: LoginBusinessLogic, LoginDataStore
         newUser.name = response.user?.userAccount.name ?? ""
         newUser.username = userName
         if let user = self.user {
-           realmRepository.updateObj(obj: user)
+           realmRepository.saveObjc(obj: user)
         } else {
            self.user = newUser
-           realmRepository.saveObjc(obj: newUser)
+           realmRepository.updateObj(obj: newUser)
         }
         presenter?.presentSomething(response: response)
     }

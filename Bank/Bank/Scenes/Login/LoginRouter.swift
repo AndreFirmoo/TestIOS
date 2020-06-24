@@ -34,10 +34,12 @@ class LoginRouter: NSObject, LoginRouting {
         login.dismiss(animated: true, completion: nil)
         
 //         let homeViewController = HomeViewController(interector: HomeInteractor(repository: HomeRepository(), user: user), router: HomeRouter(navigationController: navigationController), presenter: HomePresenter())
-//        login.present(homeViewController, animated: true, completion: nil)
-        let home = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "HomeViewController")
+
+        let home : HomeViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "HomeViewController")
+        home.setup(interactor: HomeInteractor(repository: HomeRepository(), user: user), router: HomeRouter(navigationController: navigationController), presenter: HomePresenter())
         
-        UIApplication.topViewController()?.present(home, animated: true, completion: nil)
+        home.modalPresentationStyle = .fullScreen
+        login.present(home, animated: true, completion: nil)
         
     }
 }
