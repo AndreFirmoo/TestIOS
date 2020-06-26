@@ -25,14 +25,12 @@ class HomeViewController: UIViewController, HomeDisplayLogic {
     
     
     //MARK: - Initializer Home
-    
     var router: HomeRouter?
     private var interector: HomeInteractor?
     private var presenter: HomePresenter?
     private var tableViewDataSource: HomeDataSource?
     
     //MARK: - Setup Home
-    
     public func setup(interactor: HomeInteractor, router: HomeRouter, presenter: HomePresenter) {
         self.interector = interactor
         self.interector?.presenter = presenter
@@ -42,7 +40,6 @@ class HomeViewController: UIViewController, HomeDisplayLogic {
     }
     
     // MARK: - View lifecycle
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         populateInformations()
@@ -57,7 +54,6 @@ class HomeViewController: UIViewController, HomeDisplayLogic {
     }
     
     //MARK: - Setup TableView
-    
     private func setupView() {
         self.presenter?.viewController = self
         

@@ -25,10 +25,6 @@
 		88EEB02924A1CA71001DC3C7 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EEB02824A1CA71001DC3C7 /* LoginPresenter.swift */; };
 		88EEB02B24A1CBBE001DC3C7 /* LoginModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EEB02A24A1CBBE001DC3C7 /* LoginModels.swift */; };
 		88EEB03024A1CC23001DC3C7 /* LoginRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EEB02F24A1CC23001DC3C7 /* LoginRepository.swift */; };
-		88EEB03324A1CCB7001DC3C7 /* RealmRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EEB03124A1CCB6001DC3C7 /* RealmRepository.swift */; };
-		88EEB03424A1CCB7001DC3C7 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EEB03224A1CCB7001DC3C7 /* User.swift */; };
-		88EEB03724A1CCE6001DC3C7 /* UserMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EEB03524A1CCE6001DC3C7 /* UserMapper.swift */; };
-		88EEB03824A1CCE6001DC3C7 /* StatementsMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EEB03624A1CCE6001DC3C7 /* StatementsMapper.swift */; };
 		88EEB05D24A1D7E6001DC3C7 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EEB05C24A1D7E6001DC3C7 /* API.swift */; };
 		88EEB05F24A1DE3A001DC3C7 /* APIRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EEB05E24A1DE3A001DC3C7 /* APIRepository.swift */; };
 		88EEB06824A1F1FD001DC3C7 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EEB06724A1F1FD001DC3C7 /* HomeViewController.swift */; };
@@ -48,6 +44,10 @@
 		88EEB0E024A213F7001DC3C7 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EEB0DF24A213F7001DC3C7 /* HomePresenter.swift */; };
 		88EEB0E224A21415001DC3C7 /* HomeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EEB0E124A21415001DC3C7 /* HomeRepository.swift */; };
 		88EEB0E424A21480001DC3C7 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EEB0E324A21480001DC3C7 /* HomeRouter.swift */; };
+		88F8174E24A5C92000015E8F /* RealmRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F8174D24A5C92000015E8F /* RealmRepository.swift */; };
+		88F8175024A5C93900015E8F /* UserRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F8174F24A5C93900015E8F /* UserRealm.swift */; };
+		88F8175324A5C97200015E8F /* StatementsMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F8175224A5C97200015E8F /* StatementsMapper.swift */; };
+		88F8175524A5C97E00015E8F /* UserMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F8175424A5C97E00015E8F /* UserMapper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,10 +89,6 @@
 		88EEB02824A1CA71001DC3C7 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
 		88EEB02A24A1CBBE001DC3C7 /* LoginModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModels.swift; sourceTree = "<group>"; };
 		88EEB02F24A1CC23001DC3C7 /* LoginRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRepository.swift; sourceTree = "<group>"; };
-		88EEB03124A1CCB6001DC3C7 /* RealmRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RealmRepository.swift; path = ../../../../../SantanderTeste/TesteiOSv2/BankApp/BankApp/Models/Realm/RealmRepository.swift; sourceTree = "<group>"; };
-		88EEB03224A1CCB7001DC3C7 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = ../../../../../SantanderTeste/TesteiOSv2/BankApp/BankApp/Models/Realm/User.swift; sourceTree = "<group>"; };
-		88EEB03524A1CCE6001DC3C7 /* UserMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserMapper.swift; path = ../../../../../SantanderTeste/TesteiOSv2/BankApp/BankApp/Models/Mapper/UserMapper.swift; sourceTree = "<group>"; };
-		88EEB03624A1CCE6001DC3C7 /* StatementsMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StatementsMapper.swift; path = ../../../../../SantanderTeste/TesteiOSv2/BankApp/BankApp/Models/Mapper/StatementsMapper.swift; sourceTree = "<group>"; };
 		88EEB05C24A1D7E6001DC3C7 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		88EEB05E24A1DE3A001DC3C7 /* APIRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRepository.swift; sourceTree = "<group>"; };
 		88EEB06724A1F1FD001DC3C7 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -112,6 +108,10 @@
 		88EEB0DF24A213F7001DC3C7 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 		88EEB0E124A21415001DC3C7 /* HomeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRepository.swift; sourceTree = "<group>"; };
 		88EEB0E324A21480001DC3C7 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
+		88F8174D24A5C92000015E8F /* RealmRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmRepository.swift; sourceTree = "<group>"; };
+		88F8174F24A5C93900015E8F /* UserRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRealm.swift; sourceTree = "<group>"; };
+		88F8175224A5C97200015E8F /* StatementsMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatementsMapper.swift; sourceTree = "<group>"; };
+		88F8175424A5C97E00015E8F /* UserMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserMapper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -211,10 +211,10 @@
 		88EEB01224A1B8F2001DC3C7 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				88F8175124A5C95400015E8F /* Mappers */,
+				88F8174C24A5C8F800015E8F /* Realms */,
 				88EEB02D24A1CBD5001DC3C7 /* Home */,
 				88EEB02C24A1CBC8001DC3C7 /* Login */,
-				88EEB01B24A1B994001DC3C7 /* Realm */,
-				88EEB01A24A1B988001DC3C7 /* Mapper */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -276,24 +276,6 @@
 				88EEB05E24A1DE3A001DC3C7 /* APIRepository.swift */,
 			);
 			path = APIRepository;
-			sourceTree = "<group>";
-		};
-		88EEB01A24A1B988001DC3C7 /* Mapper */ = {
-			isa = PBXGroup;
-			children = (
-				88EEB03624A1CCE6001DC3C7 /* StatementsMapper.swift */,
-				88EEB03524A1CCE6001DC3C7 /* UserMapper.swift */,
-			);
-			path = Mapper;
-			sourceTree = "<group>";
-		};
-		88EEB01B24A1B994001DC3C7 /* Realm */ = {
-			isa = PBXGroup;
-			children = (
-				88EEB03124A1CCB6001DC3C7 /* RealmRepository.swift */,
-				88EEB03224A1CCB7001DC3C7 /* User.swift */,
-			);
-			path = Realm;
 			sourceTree = "<group>";
 		};
 		88EEB02C24A1CBC8001DC3C7 /* Login */ = {
@@ -406,6 +388,24 @@
 				88EEB0D424A1FFD6001DC3C7 /* DateHelper.swift */,
 			);
 			path = DateHelper;
+			sourceTree = "<group>";
+		};
+		88F8174C24A5C8F800015E8F /* Realms */ = {
+			isa = PBXGroup;
+			children = (
+				88F8174D24A5C92000015E8F /* RealmRepository.swift */,
+				88F8174F24A5C93900015E8F /* UserRealm.swift */,
+			);
+			path = Realms;
+			sourceTree = "<group>";
+		};
+		88F8175124A5C95400015E8F /* Mappers */ = {
+			isa = PBXGroup;
+			children = (
+				88F8175224A5C97200015E8F /* StatementsMapper.swift */,
+				88F8175424A5C97E00015E8F /* UserMapper.swift */,
+			);
+			path = Mappers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -549,10 +549,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				88EEB0CD24A1FE42001DC3C7 /* StringValidator.swift in Sources */,
+				88F8174E24A5C92000015E8F /* RealmRepository.swift in Sources */,
 				88EEB02924A1CA71001DC3C7 /* LoginPresenter.swift in Sources */,
 				88EEB0E024A213F7001DC3C7 /* HomePresenter.swift in Sources */,
 				88EEB03024A1CC23001DC3C7 /* LoginRepository.swift in Sources */,
-				88EEB03724A1CCE6001DC3C7 /* UserMapper.swift in Sources */,
 				88EEB0CF24A1FE76001DC3C7 /* Validate.swift in Sources */,
 				88EEAFE624A1B665001DC3C7 /* LoginViewController.swift in Sources */,
 				88EEB05F24A1DE3A001DC3C7 /* APIRepository.swift in Sources */,
@@ -568,17 +568,17 @@
 				88EEB0BC24A1FB21001DC3C7 /* AlertController.swift in Sources */,
 				88EEB0DC24A21241001DC3C7 /* HomeDataStore.swift in Sources */,
 				88EEB02524A1C5CB001DC3C7 /* LoginRouter.swift in Sources */,
+				88F8175524A5C97E00015E8F /* UserMapper.swift in Sources */,
 				88EEB05D24A1D7E6001DC3C7 /* API.swift in Sources */,
 				88EEB02724A1C7F5001DC3C7 /* LoginInteractor.swift in Sources */,
 				88EEB0C624A1FD79001DC3C7 /* JsonConstant.swift in Sources */,
+				88F8175324A5C97200015E8F /* StatementsMapper.swift in Sources */,
 				88EEB0BA24A1FADC001DC3C7 /* ApplicationStack.swift in Sources */,
 				88EEAFE424A1B665001DC3C7 /* SceneDelegate.swift in Sources */,
-				88EEB03424A1CCB7001DC3C7 /* User.swift in Sources */,
-				88EEB03824A1CCE6001DC3C7 /* StatementsMapper.swift in Sources */,
 				88EEB0C224A1FC17001DC3C7 /* Error.swift in Sources */,
 				88EEB0D324A1FF5F001DC3C7 /* PriceHelper.swift in Sources */,
-				88EEB03324A1CCB7001DC3C7 /* RealmRepository.swift in Sources */,
 				88EEB0DE24A21336001DC3C7 /* HomeInterector.swift in Sources */,
+				88F8175024A5C93900015E8F /* UserRealm.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
