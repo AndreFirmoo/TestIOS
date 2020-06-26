@@ -11,28 +11,28 @@ import Foundation
 
 extension String {
     func matchRegex(_ regex: String) -> Bool {
-        let test = NSPredicate(format: "SELF MATCHES %@", regex)
-        return test.evaluate(with: self)
+        let testString = NSPredicate(format: "SELF MATCHES %@", regex)
+        return testString.evaluate(with: self)
     }
 }
 
 extension String {
     var isCPF: Bool {
-        let cpf = self.onlyNumbers()
-        guard cpf.count == 11 else { return false }
+        let CPF = self.onlyNumbers()
+        guard CPF.count == 11 else { return false }
         
-        let i1 = cpf.index(cpf.startIndex, offsetBy: 9)
-        let i2 = cpf.index(cpf.startIndex, offsetBy: 10)
-        let i3 = cpf.index(cpf.startIndex, offsetBy: 11)
-        let d1 = Int(cpf[i1..<i2])
-        let d2 = Int(cpf[i2..<i3])
+        let i1 = CPF.index(CPF.startIndex, offsetBy: 9)
+        let i2 = CPF.index(CPF.startIndex, offsetBy: 10)
+        let i3 = CPF.index(CPF.startIndex, offsetBy: 11)
+        let d1 = Int(CPF[i1..<i2])
+        let d2 = Int(CPF[i2..<i3])
         
         var temp1 = 0, temp2 = 0
         
         for i in 0...8 {
-            let start = cpf.index(cpf.startIndex, offsetBy: i)
-            let end = cpf.index(cpf.startIndex, offsetBy: i+1)
-            let char = Int(cpf[start..<end])
+            let start = CPF.index(CPF.startIndex, offsetBy: i)
+            let end = CPF.index(CPF.startIndex, offsetBy: i+1)
+            let char = Int(CPF[start..<end])
             
             temp1 += char! * (10 - i)
             temp2 += char! * (11 - i)

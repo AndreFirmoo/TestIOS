@@ -10,11 +10,13 @@ import UIKit
 
 
 protocol HomeDisplayLogic: class{
-    func displaySomething(viewModel: Home.ViewModel)
+    func displayPrimaryInformation(viewModel: Home.ViewModel)
 }
 
 
 class HomeViewController: UIViewController, HomeDisplayLogic {
+    
+    //MARK: - IBOutlet
     
     @IBOutlet weak var usernameLb: UILabel!
     @IBOutlet weak var userAccontLb: UILabel!
@@ -22,12 +24,14 @@ class HomeViewController: UIViewController, HomeDisplayLogic {
     @IBOutlet weak var tableview: UITableView!
     
     
-    
+    //MARK: - Initializer Home
     
     var router: HomeRouter?
     private var interector: HomeInteractor?
     private var presenter: HomePresenter?
     private var tableViewDataSource: HomeDataSource?
+    
+    //MARK: - Setup Home
     
     public func setup(interactor: HomeInteractor, router: HomeRouter, presenter: HomePresenter) {
         self.interector = interactor
@@ -37,10 +41,7 @@ class HomeViewController: UIViewController, HomeDisplayLogic {
         setupView()
     }
     
-    
-    
     // MARK: - View lifecycle
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,6 +56,8 @@ class HomeViewController: UIViewController, HomeDisplayLogic {
         
     }
     
+    //MARK: - Setup TableView
+    
     private func setupView() {
         self.presenter?.viewController = self
         
@@ -62,6 +65,7 @@ class HomeViewController: UIViewController, HomeDisplayLogic {
         tableViewDataSource = HomeDataSource(presenter: self.presenter!)
         
     }
+    //MARK: - Logout Button - IBAction
     @IBAction func logout(_ sender: Any) {
         self.interector?.removeUserFromRealm()
         router?.routeToLogin(home: self)
@@ -74,7 +78,7 @@ class HomeViewController: UIViewController, HomeDisplayLogic {
         self.interector?.getInfoStatements(request: request)
     }
     
-    func displaySomething(viewModel: Home.ViewModel) {
+    func displayPrimaryInformation(viewModel: Home.ViewModel) {
         usernameLb.text = viewModel.response.user?.name
         userAccontLb.text = viewModel.response.user?.account
         userBalance.text = viewModel.response.user?.balance

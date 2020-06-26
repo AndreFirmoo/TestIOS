@@ -10,7 +10,6 @@
 import UIKit
 
 enum Login {
-  // MARK: Use cases
     struct Request {
         let username: String
         let password: String

@@ -10,11 +10,11 @@ import Foundation
 
 struct PriceHelper {
     static func formatPrice(price: Double) -> String {
-        let currencyFormatter = NumberFormatter()
-        currencyFormatter.usesGroupingSeparator = true
-        currencyFormatter.numberStyle = .currency
+        let priceFormatter = NumberFormatter()
+        priceFormatter.usesGroupingSeparator = true
+        priceFormatter.numberStyle = .currency
         
-        currencyFormatter.locale = Locale(identifier: "pt_BR")
-        return currencyFormatter.string(from: NSNumber(value: price)) ?? ""
+        priceFormatter.locale = Locale(identifier: "pt_BR")
+        return priceFormatter.string(from: NSNumber(value: price)) ?? ""
     }
 }

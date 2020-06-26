@@ -79,13 +79,12 @@ class LoginViewController: UIViewController {
             interactor?.getValidationLogin(request: requestUser)
         }
     }
+    
     func login(){
          if let user = interactor?.user {
             router?.routeToHome(login: self, user: user)
         }
     }
-    
-    
 }
 
 extension LoginViewController: LoginDisplayInfos {

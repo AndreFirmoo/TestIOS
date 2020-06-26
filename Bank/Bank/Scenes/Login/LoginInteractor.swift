@@ -87,6 +87,6 @@ class LoginInteractor: LoginBusinessLogic, LoginDataStore{
            
            realmRepository.updateObj(obj: newUser)
         }
-        presenter?.presentSomething(response: response)
+        presenter?.presentHome(response: response)
     }
 }

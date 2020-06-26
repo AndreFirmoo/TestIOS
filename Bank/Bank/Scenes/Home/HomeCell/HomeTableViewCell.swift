@@ -14,6 +14,8 @@ class HomeTableViewCell: UITableViewCell {
     @IBOutlet weak var itemTitleLb: UILabel!
     @IBOutlet weak var priceLb: UILabel!
     
+    //MARK: - Prepare Cell
+    
     func prepareCells(statement: Statement){
         itemTypeLb.text = statement.title
         itemTitleLb.text = statement.desc

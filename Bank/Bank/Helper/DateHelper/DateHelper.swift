@@ -14,7 +14,6 @@ extension Date {
         dateformat.dateFormat = "dd-MM-yyyy"
         dateformat.locale = Locale(identifier: "pt-br")
         dateformat.date(from: format)
-    
         dateformat.dateStyle = .short
         print(format)
         return dateformat.string(from: self)

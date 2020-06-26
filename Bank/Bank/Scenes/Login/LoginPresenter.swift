@@ -12,7 +12,7 @@ import Alamofire
 protocol LoginPresentationLogic {
     func presentLastUser(user: UserRealm)
     func presentError(error: String)
-    func presentSomething(response: Login.Response)
+    func presentHome(response: Login.Response)
 }
 
 class LoginPresenter: LoginPresentationLogic {
@@ -28,7 +28,7 @@ class LoginPresenter: LoginPresentationLogic {
         viewController?.showError(error: error)
     }
     
-    func presentSomething(response: Login.Response) {
+    func presentHome(response: Login.Response) {
         let viewModel = Login.ViewModel()
         viewController?.displayHome(viewModel: viewModel )
     }
