@@ -32,8 +32,6 @@ class LoginRouter: NSObject, LoginRouting {
     
     func routeToHome(login: LoginViewController, user: UserRealm) {
         login.dismiss(animated: true, completion: nil)
-        
-//         let homeViewController = HomeViewController(interector: HomeInteractor(repository: HomeRepository(), user: user), router: HomeRouter(navigationController: navigationController), presenter: HomePresenter())
 
         let home : HomeViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "HomeViewController")
         home.setup(interactor: HomeInteractor(repository: HomeRepository(), user: user), router: HomeRouter(navigationController: navigationController), presenter: HomePresenter())
